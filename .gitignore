@@ -1,0 +1,3 @@
+# Ignorerar följande mappar:
+node_modules/
+pub/
