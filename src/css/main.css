@@ -3,8 +3,14 @@ body {
     margin: 0;
     background-image: url('../images/bg.jpg');
 	background-size: cover;
-    background-position: center center;
+	background-position: center center;
 }
+
+
+  
+  #container .fade {
+	opacity: 0;
+  }
 
 *,
 *::before,
@@ -22,7 +28,7 @@ h1 {
 	z-index: 3;
 }
 
-.container {
+#container {
 	z-index: 1;
 	position: relative;
 	overflow: hidden;
@@ -30,7 +36,9 @@ h1 {
 	align-items: center;
 	justify-content: center;
 	height: 100vh;
-    padding: 2rem;
+	padding: 2rem;
+	opacity: 1;
+	transition: opacity 1s; 
 }
 
 .bird {
@@ -38,7 +46,7 @@ h1 {
 	background-size: auto 100%;
 	width: 88px;
 	height: 125px;
-	will-change: background-position;
+	will-change: background-position;   
 	
 	animation-name: fly-cycle;
 	animation-timing-function: steps(10);
@@ -95,83 +103,3 @@ h1 {
 		animation-duration: 16s;
 		animation-delay: 10.25s;
 	}
-
-@keyframes fly-cycle {
-	
-	100% {
-		background-position: -900px 0;
-	}
-	
-}
-
-@keyframes fly-right-one {
-	
-	0% {
-		transform: scale(0.3) translateX(-10vw);
-	}
-	
-	10% {
-		transform: translateY(2vh) translateX(10vw) scale(0.4);
-	}
-	
-	20% {
-		transform: translateY(0vh) translateX(30vw) scale(0.5);
-	}
-	
-	30% {
-		transform: translateY(4vh) translateX(50vw) scale(0.6);
-	}
-	
-	40% {
-		transform: translateY(2vh) translateX(70vw) scale(0.6);
-	}
-	
-	50% {
-		transform: translateY(0vh) translateX(90vw) scale(0.6);
-	}
-	
-	60% {
-		transform: translateY(0vh) translateX(110vw) scale(0.6);
-	}
-	
-	100% {
-		transform: translateY(0vh) translateX(110vw) scale(0.6);
-	}
-	
-}
-
-@keyframes fly-right-two {
-	
-	0% {
-		transform: translateY(-2vh) translateX(-10vw) scale(0.5);
-	}
-	
-	10% {
-		transform: translateY(0vh) translateX(10vw) scale(0.4);
-	}
-	
-	20% {
-		transform: translateY(-4vh) translateX(30vw) scale(0.6);
-	}
-	
-	30% {
-		transform: translateY(1vh) translateX(50vw) scale(0.45);
-	}
-	
-	40% {
-		transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
-	}
-	
-	50% {
-		transform: translateY(0vh) translateX(90vw) scale(0.45);
-	}
-	
-	51% {
-		transform: translateY(0vh) translateX(110vw) scale(0.45);
-	}
-	
-	100% {
-		transform: translateY(0vh) translateX(110vw) scale(0.45);
-	}
-	
-}
